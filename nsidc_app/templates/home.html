@@ -1,0 +1,820 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!------------ GOOGLE FONTS ------------>
+    <link href="https://fonts.googleapis.com/css?family=Anton|Cabin|Lato|Fjalla+One|Montserrat|Roboto&display=swap"
+        rel="stylesheet">
+
+    <!------------ FONTS AWESOME ------------>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" > -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
+
+    <title>NCPOR</title>
+    <style>
+        .bar:hover .class1 {
+            display: flex;
+            margin-left: -750px;
+            width: 900px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            background-color: steelblue;
+        }
+
+        .bar:hover .class2 {
+            display: flex;
+            margin-left: -500px;
+            width: 600px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            background-color: steelblue;
+        }
+
+        .bar2 {
+            position: relative;
+        }
+
+        .class3 {
+            background-color: steelblue;
+            padding: 1em 0;
+            position: absolute;
+            /*WITH RESPECT TO PARENT*/
+            display: none;
+            border-radius: 5px;
+            top: 90px;
+            margin-left: -16px;
+        }
+        
+
+        .class3 li+li {
+            margin-top: 10px;
+        }
+
+        .class3 li {
+            padding: 1em 1em;
+            width: auto;
+            text-align: center;
+        }
+
+        .bar2:hover .class3 {
+            display: block;
+            margin-left: -18px;
+            width: auto;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            background-color: steelblue;
+        }
+        {% comment %} .class10 {
+            background-color: steelblue;
+            position: absolute;
+            /*WITH RESPECT TO PARENT*/
+            display: none;
+            border-radius: 5px;
+            list-style:none;
+        }
+        .class10 li a{
+            padding:42px;
+            border:2px solid black;
+        }
+
+        .mmy1:hover .class10 a{
+            font-size:20px;
+        }
+        .mmy1:hover .class10 {
+            display: block;
+            margin-left:-5px;
+            margin-top:-1px;
+            font-size:40px;
+            border:2px solid red;
+            height:200px;
+            width:20px;
+            padding:50px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            background-color: steelblue;
+        } {% endcomment %}
+        .class11 {
+            background-color: steelblue;
+            position: absolute;
+            /*WITH RESPECT TO PARENT*/
+            display: none;
+            border-radius: 5px;
+            list-style:none;
+            
+        }
+        .class11 li+li {
+            margin-top: 10px;
+            margin-bottom:15px;
+        }
+        .mmy2:hover .class11 a{
+            font-size:20px;
+            {% comment %} border:2px solid black; {% endcomment %}
+            {% comment %} margin-top:50px; {% endcomment %}
+            
+        }
+        .mmy2:hover .class11 {
+            display: block;
+            margin-left:-50px;
+            margin-top:15px;
+            
+            font-size:20px;
+            {% comment %} width:0px; {% endcomment %}
+            {% comment %} padding:0px 50px; {% endcomment %}
+            background-color: steelblue;
+            {% comment %} border:2px solid red; {% endcomment %}
+            padding:40px;
+            padding-top:0px;
+            padding-bottom:0px;
+        }
+        .mmy3:hover .class12 a{
+            font-size:20px;
+            {% comment %} border:2px solid black; {% endcomment %}
+        }
+        .mmy3:hover .class12 {
+            display: block;
+            margin-left:-5px;
+            margin-top:35px;
+            font-size:20px;
+            {% comment %} width:20px; {% endcomment %}
+            padding:0px 30px;
+            background-color: steelblue;
+        }
+        .class12 {
+            background-color: steelblue;
+            position: absolute;
+            /*WITH RESPECT TO PARENT*/
+            display: none;
+            border-radius: 5px;
+            list-style:none;
+        }
+
+        .im1 {
+            {% comment %} margin-top: -10px; {% endcomment %}
+            {% comment %} height:20px; {% endcomment %}
+            {% comment %} border:2px solid red;
+            border-radius:100%; {% endcomment %}
+            {% comment %} margin-left:100px; {% endcomment %}
+            padding-left:20px;
+            {% comment %} padding:10px; {% endcomment %}
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="bfull">
+        <div class="full">
+            <div class="navbar">
+                <!-- <ul> -->
+                <a href="/"><img class="im1" src="{% static 'images/icon.png' %}" alt=""
+                        style="margin-left: -50px; height: 80px; margin-top: 0px;"></a>
+                <li class="b class" style="font-size: 31px;margin-top: -1px;"><a href="/"
+                        style="text-decoration:none;color:white">National Centre for Polar and Ocean Research </a></li>
+                <li class="b bar" style="padding:0px;margin-left:100px;">
+                    <a href="/" style="text-decoration:none;color:white;font-size:18px;">About</a>
+                    {% comment %} <div class="dropdown4 about_dd" style="margin-left: -833px;">
+                        <div class="about1 ss1 ">
+                            <p><a href="#" style="text-decoration:none;color:white">About NSIDC</a></p>
+                            <p class="line"></p>
+                            <p class="task"><a href="#" style="text-decoration:none;color:white">NSIDC People</a></p>
+                            <p class="task"><a href="#" style="text-decoration:none;color:white">Our Sponsors</a></p>
+                            <p class="task"><a href="#" style="text-decoration:none;color:white">Jobs</a></p>
+                            <p class="task"><a href="#" style="text-decoration:none;color:white">NSIDC Highlights</a>
+                            </p>
+                            <p class="task"><a href="#" style="text-decoration:none;color:white">Use & Copyright</a></p>
+                            <p class="task"><a href="#" style="text-decoration:none;color:white">Contact Us</a></p>
+                            <p class="task"><a href="#" style="text-decoration:none;color:white">NSIDC's Green Data
+                                    Center</a></p>
+                        </div>
+                        <div class="about2 ss3">
+                            <p><a href="#" style="text-decoration:none;color:white">About the Cryosphere</a></p>
+                            <p class="line"></p>
+                            <div class="bahar">
+                                <div class="about2_1">
+                                    <p class="task"><a href="#" style="text-decoration:none;color:white">quick Facts</a>
+                                    </p>
+                                    <p class="task"><a href="#" style="text-decoration:none;color:white">All About The
+                                            Cryosphere</a></p>
+                                    <p class="task"><a href="#" style="text-decoration:none;color:white">All About
+                                            Glaciers</a></p>
+                                    <p class="task"><a href="#" style="text-decoration:none;color:white">All About
+                                            Snow</a></p>
+                                    <p class="task"><a href="#" style="text-decoration:none;color:white">All About
+                                            Frozen Ground</a></p>
+                                    <p class="task"><a href="#" style="text-decoration:none;color:white">All About Sea
+                                            Ice</a></p>
+                                    <p class="task"><a href="#" style="text-decoration:none;color:white">All About
+                                            Arctic Climatology & Meteorology</a></p>
+                                </div>
+                                <div class="about2_2">
+                                    <p class="task"><a href="#" style="text-decoration:none;color:white">Snow, Ice and
+                                            Climate Change</a></p>
+                                    <p class="task"><a href="#" style="text-decoration:none;color:white">Studying the
+                                            Cryosphere</a></p>
+                                    <p class="task"><a href="#" style="text-decoration:none;color:white">Photo
+                                            Gallery</a></p>
+                                    <p class="task"><a href="#" style="text-decoration:none;color:white">Eduational
+                                            Resources</a></p>
+                                    <p class="task"><a href="#" style="text-decoration:none;color:white">Cryosphere
+                                            Glossary</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about3 ss1">
+                            <p class="my">What is the Cryosphere</p>
+                            <p class="line"></p>
+                            <div class="ima">
+                                <img src="{% static 'images/0508_cold_thumb.jpg' %}" alt="0508_cold_thumb">
+                                <p>When scientists talk about the cryosphere, they mean the places on Earth where water
+                                    is in its solid form, frozen into ice or snow. <a href="#">Read more...</a></p>
+                            </div>
+                        </div>
+                    </div> {% endcomment %}
+
+                    <ul class="drop class1">
+                        {% comment %} <li><a href="about/jobs" style="text-decoration:none;color:white;">Jobs</a></li>
+                        <li><a href="about/ncpor" style="text-decoration:none;color:white">NSIDC People</a></li>
+                        <li><a href="about/sponsors" style="text-decoration:none;color:white">Our Sponsors</a></li>
+                        <li><a href="about/highlights" style="text-decoration:none;color:white">NSIDC Highlights</a>
+                        </li>
+                        <li><a href="about/copyrght" style="text-decoration:none;color:white">Use & Copyright</a></li>
+                        <li><a href="about/contact" style="text-decoration:none;color:white">Contact Us</a></li>
+                        <li><a href="about/greendata" style="text-decoration:none;color:white">NSIDC's Green Data
+                                Center</a></li> {% endcomment %}
+
+                        {% for about in abouts %}
+
+                        <li><a href = "/about_example/{{about.slug}}" style="text-decoration:none;color:white">{{about.title}}</a></li>
+    
+                        {% endfor %}
+                    </ul>
+                </li>
+
+                <li class="b bar" style="padding:0px;padding-left:5px;">
+                    <a href="/" style="text-decoration:none;color:white;font-size:18px;">Research</a>
+                    {% comment %} <div class="dropdown2 dd_2" style="margin-left: -937px;">
+                        <div class="l">
+                            <figure class="sp">
+                                <img src="{% static 'images/researcher-100.jpg' %}" alt="researcher-100">
+                                <figcaption>SNOW</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="{% static 'images/researcher-200.jpg' %}" alt="researcher-200">
+                                <figcaption>GLACIERS</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="{% static 'images/researcher-300.jpg' %}" alt="researcher-300">
+                                <figcaption>ICE SHEETS</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="{% static 'images/researcher-400.jpg' %}" alt="researcher-400">
+                                <figcaption>SEA ICE</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="{% static 'images/researcher-500.jpg' %}" alt="researcher-500">
+                                <figcaption>ICE SHELVES</figcaption>
+                            </figure>
+                        </div>
+
+                    </div>
+                </div> {% endcomment %}
+                
+                {% comment %} <ul class = "drop class2"> {% endcomment %}
+                    <!-- <li><a href="research/scientists" style="text-decoration:none;color:white">Scientists</a></li>
+                    <li><a href="research/research" style="text-decoration:none;color:white">Research Grants</a></li>
+                    <li><a href="research/publications" style="text-decoration:none;color:white">Scientific Publications</a></li>
+                    <li><a href="research/information" style="text-decoration:none;color:white">Information Research</a></li>
+                    <li><a href="research/scientific" style="text-decoration:none;color:white">NCPOR Scientific Expeditions</a></li> -->
+                    {% comment %} {% for research in researchs %}
+                        <li><a href = "/research_example/{{research.slug}}" style="text-decoration:none;color:white">{{research.title}}</a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </li> {% endcomment %}
+                        {% comment %} <div class="r">
+                            <h3>On Thin Ice:</h3>
+                            <h3>Expedition to a Crumbling Ice Shelf</h3>
+                            <p class="line"></p>
+                            <div class="ima">
+                                <img src="{% static 'images/researcher.jpg' %}" alt="researcher">
+                                <p>Scientists blog from Antarctica and provide a glimpse of what it's like to do
+                                    research in the field. <a href="#">Read their blog...</a></p>
+                            </div>
+                        </div>
+                    </div>  {% endcomment %}
+
+                    <ul class="drop class2">
+                        <li class="bar2"><a href="research/scientists"
+                                style="text-decoration:none;color:white">Scientists</a>
+                            <ul class="class3">
+                                <!-- {% for research in researchs %}
+                        <li><a href="/research_example/{{research.slug}}"
+                                style="text-decoration:none;color:white">{{research.title}}</a></li>
+                        {% endfor %} -->
+                        {% for research in researchScientists %}
+                    <li><a href="research_scientists_example/{{research.slug}}"
+                            style="text-decoration:none;color:white">{{research.title}}</a></li>
+
+                    {% endfor %}
+                            </ul>
+                        </li>
+                        <li class="bar2"><a href="research/research" style="text-decoration:none;color:white">Research Grants</a>
+                            <ul class="class3">
+                                {% for researchGrant in researchGrants %}
+                    <li><a href="research_grants_example/{{researchGrant.slug}}"
+                            style="text-decoration:none;color:white">{{researchGrant.title}}</a></li>
+                    {% endfor %}
+                            </ul>
+                        </li>
+                        <li class="bar2"><a href="research/publications" style="text-decoration:none;color:white">Scientific
+                                Publications</a>
+                            <ul class="class3">
+                                {% for scientificPublication in scientificPublications %}
+                    <li><a href="research_publications_example/{{scientificPublication.slug}}"
+                            style="text-decoration:none;color:white">{{scientificPublication.title}}</a></li>
+                    {% endfor %}
+                            </ul>
+                        </li>
+                        <li class="bar2"><a href="research/information" style="text-decoration:none;color:white">Information
+                                Research</a>
+                            <ul class="class3">
+                                {% for informationResearch in informationResearchs %}
+                    <li><a href="research_information_example/{{informationResearch.slug}}"
+                            style="text-decoration:none;color:white">{{informationResearch.title}}</a></li>
+                    {% endfor %}
+                            </ul>
+                        </li>
+                        <li class="bar2"><a href="research/scientific" style="text-decoration:none;color:white">NCPOR Scientific
+                                Expeditions</a>
+                            <ul class="class3">
+                                {% for scientificExpedition in scientificExpeditions %}
+                    <li><a href="scientific_expeditions_example/{{scientificExpedition.slug}}"
+                            style="text-decoration:none;color:white">{{scientificExpedition.title}}</a></li>
+                    {% endfor %}
+                            </ul>
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="b bar" style="padding:0px;margin-right:50px;">
+                    <a href="tender" style="text-decoration:none;color:white;font-size:18px;">Tender</a>
+                </li>
+                <li class="b bar" style="padding:0px;margin-left:-30px;">
+                    <a href="careers" style="text-decoration:none;color:white;font-size:18px;">Careers</a>
+                </li>
+
+
+                <!-- </ul> -->
+            </div>
+
+            <div class="back" id="slideshow">
+                <img src="{% static 'images/image1.jpg' %}" alt="image1">
+                <div class="container">
+                    <h2>IceFlow: mapping cryospheric elevation changes</h2>
+                    <p>This NSIDC DAAC data tool allows scientists to access continuous elevation data from 1993 in a
+                        uniform format.
+                        <br><a href="#" style="text-decoration: none ; color:blue">Read More..</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="sc">
+                <h2 style="width:10px;margin-left:420px;font-size:30px;color:white;">RESEARCH</h2>
+
+                <div class="im">
+                    <div class="fl">
+                        <figure >
+                            <img src="{% static 'images/researcher-100.jpg' %}" alt="Trulli"
+                                style="border: 10px solid skyblue;border-radius:0px;width: 100px;height:100px;">
+                            <figcaption class="mmy2" style="font-size: 15px;color:white;"><a
+                                    href="/"
+                                    style="text-decoration:none;color:white">SCIENTISTS</a>
+                                    <ul class="class11">
+                                        {% comment %} {% for redsc in redsc %}
+                            <li><a href="/research/research_example/{{redsc.slug}}"
+                                    style="text-decoration:none;color:white">{{redsc.title}}</a></li>
+                            {% endfor %} {% endcomment %}
+                            {% for research in researchScientists %}
+                    <li><a href="research_scientists_example/{{research.slug}}"
+                            style="text-decoration:none;color:white">{{research.title}}</a></li>
+
+                    {% endfor %}
+                            </ul>
+                                </figcaption>
+                                    
+                        </figure>
+                    </div>
+
+                    <div class="fl">
+                        <figure>
+                            <img src="{% static 'images/researcher-200.jpg' %}" alt="Trulli"
+                                style="border: 10px solid skyblue;border-radius:0px;width: 100px;height:100px;">
+                            <figcaption class="mmy2" style="font-size: 15px;color:white;"><a href="/"
+                                    style="text-decoration:none;color:white">RESEARCH GRANTS</a>
+                                    <ul class="class11">
+                                        {% for researchGrant in researchGrants %}
+                    <li><a href="research_grants_example/{{researchGrant.slug}}"
+                            style="text-decoration:none;color:white">{{researchGrant.title}}</a></li>
+                    {% endfor %}
+                            </ul>
+                                </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="fl">
+                        <figure>
+                            <img src="{% static 'images/researcher-300.jpg' %}" alt="Trulli"
+                                style="border: 10px solid skyblue;border-radius:0px;width: 100px;height:100px;">
+                            <figcaption class="mmy2" style="font-size: 15px;color:white;"><a
+                                    href="/"
+                                    style="text-decoration:none;color:white">SCIENTIFIC PUBLICATIONS</a>
+                                    <ul class="class11">
+                                        {% for scientificPublication in scientificPublications %}
+                    <li><a href="research_publications_example/{{scientificPublication.slug}}"
+                            style="text-decoration:none;color:white">{{scientificPublication.title}}</a></li>
+                    {% endfor %}
+                                        
+                            </ul>
+                                </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="fl">
+                        <figure>
+                            <img src="{% static 'images/researcher-400.jpg' %}" alt="Trulli"
+                                style="border: 10px solid skyblue;border-radius:0px;width: 100px;height:100px;">
+                            <figcaption class="mmy2" style="font-size: 15px;color:white;"><a href="/research_example/info_research"
+                                    style="text-decoration:none;color:white">INFORMATION RESEARCH</a>
+                                    <ul class="class11">
+                                        {% for informationResearch in informationResearchs %}
+                    <li><a href="research_information_example/{{informationResearch.slug}}"
+                            style="text-decoration:none;color:white">{{informationResearch.title}}</a></li>
+                    {% endfor %}
+                            </ul>
+                                </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="fl">
+                        <figure>
+                            <img src="{% static 'images/researcher-500.jpg' %}" alt="Trulli"
+                                style="border: 10px solid skyblue;border-radius:0px;width: 100px;height:100px;">
+                            <figcaption class="mmy2" style="font-size: 15px;color:white;"><a
+                                    href="/research_example/research_expeditions"
+                                    style="text-decoration:none;color:white">NSIDC SCIENTIFIC EXPEDITIONS</a>
+                                    <ul class="class11">
+                                        {% for scientificExpedition in scientificExpeditions %}
+                    <li><a href="scientific_expeditions_example/{{scientificExpedition.slug}}"
+                            style="text-decoration:none;color:white">{{scientificExpedition.title}}</a></li>
+                    {% endfor %}
+                            </ul>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    {% comment %} {% for research in researchs %}
+                    <div class="fl">
+                        <figure>
+                            <img src="{% static 'images/researcher-500.jpg' %}" alt="Trulli"
+                                style="border: 10px solid skyblue;border-radius:0px;width: 100px;height:100px;">
+                            <figcaption style="font-size: 15px;color:white;"></figcaption>
+                        </figure>
+                    </div>
+                    {% endfor %} {% endcomment %}
+                </div>
+            </div>
+            {% comment %} <div class="blu">
+                <div class="main">
+
+                    <div class="b1">
+                        <input type="text" placeholder="Search for data sets" class="ip">
+                        <button>Go!</button>
+                    </div>
+                    <div class="b2">
+                        <button>Select a data collection</button>
+                    </div>
+
+                </div>
+            </div> {% endcomment %}
+
+            <div class="wt">
+                <div class="up">
+                    {% comment %} <a href="#"><img src="{% static 'images/ciresLogo.png' %}" alt="ciresLogo"></a> {%
+                    endcomment %}
+                    {% comment %} <a href="#">
+                        <img src="{% static 'images/UniversityOfCB.png' %}" alt="UniversityOfCB"
+                            style="height: 90px; width: 90px;">
+                    </a> {% endcomment %}
+                    <div class="par" style="margin-top:30px;">
+                        {% comment %} <p class="par1" style="color:black">{% endcomment %}
+                        <h2 style="display:inline;margin-left:-50px;">Welcome to NCPOR</h2>
+
+                        <p class="par2" style="color:darkslategray;text-align:justify;">
+                            National Centre for Polar and Ocean Research (NCPOR) is India’s premier R&D institution
+                            responsible for the country’s research activities in the polar and Southern Ocean
+                            realms.Lead role in the geoscientific surveys of the country’s EEZ and its extended
+                            continental shelf beyond 200M, deep-sea drilling in the Arabian Sea basin through the IODP,
+                            exploration for ocean non-living resources such as the gas hydrates and multi-metal
+                            sulphides in mid-ocean ridges.
+                            <a href="#">Read More ..</a>
+                        </p>
+                    </div>
+                    {% comment %} <a href="#">
+                        <img src="{% static 'images/nasa-logo72w.png' %}" alt="nasa-logo72w">
+                    </a>
+                    <a href="#">
+                        <img src="{% static 'images/NOAA.png' %}" alt="NOAA">
+                    </a>
+                    <a href="#">
+                        <img src="{% static 'images/NSF.jpg' %}" alt="NSF">
+                    </a> {% endcomment %}
+                </div>
+                <div class="ev">
+                    <div class="in">
+                        <img src="{% static 'images/asina.jpg' %}" alt="asina" style="width:220px;">
+                        <a href="#" style="text-decoration: none">
+                            <h3>Arctic Sea Ice News & Analysis</h3>
+                        </a>
+                        <p>Scientific analysis of Arctic sea ice conditions plus daily images</p>
+                    </div>
+                    <div class="in">
+                        <img src="{% static 'images/eloka-image(1).jpg' %}" alt="eloka-image" style="width:220px;">
+                        <a href="#" style="text-decoration: none">
+                            <h3>ELOKA</h3>
+                        </a>
+                        <p>Working together to understand the changing Arctic system</p>
+                    </div>
+                    <div class="in">
+                        <img src="{% static 'images/snow-today.jpg' %}" alt="snow-today" style="width:220px;">
+                        <a href="#" style="text-decoration: none">
+                            <h3>Snow Today</h3>
+                        </a>
+                        <p>Scientific analysis of snow conditions in the Western United States plus daily images</p>
+                    </div>
+                    <div class="in">
+                        <img src="{% static 'images/daac-image.jpg' %}" alt="daac-image" style="width:220px;">
+                        <a href="#" style="text-decoration: none">
+                            <h3>The NASA DAAC at NSIDC</h3>
+                        </a>
+
+                        <p>NASA Earth science data on snow, ice, cryosphere, and climate</p>
+                    </div>
+                    <div class="in">
+                        <img src="{% static 'images/cryosphere-image.jpg' %}" alt="cryosphere" style="width:220px;">
+                        <a href="#" style="text-decoration: none">
+                            <h3>Visit the Cryosphere</h3>
+                        </a>
+
+                        <p>Facts, photos and educational resources about Earth's frozen regions</p>
+                    </div>
+                    <div class="in">
+                        <img src="{% static 'images/greenland-image.jpg' %}" alt="greenland-image" style="width:220px;">
+                        <a href="#" style="text-decoration: none">
+                            <h3>Greenland Today</h3>
+                        </a>
+
+                        <p>Daily surface melt images from NASA data, and scientific analysis</p>
+                    </div>
+                </div>
+                <div class="news">
+                    <div class="left">
+                        <h2 style="color:darkslategray;">News</h2>
+                        <div class="ns">
+                            <p class="date">16 June 2022</p>
+                            <a href="#">
+                                <h3>Newly documented population of polar bears in Southeast Greenland sheds light on the
+                                    species’ future in a warming Arctic</h3>
+                            </a>
+                            <p class="parag">A new population of polar bears documented on the southeast coast of
+                                Greenland
+                                use glacier
+                                ice to survive despite limited access to sea ice. This small, genetically distinct group
+                                of
+                                polar bears could be important to the future of the species in a warming world.</p>
+                        </div>
+                        <div class="ns">
+                            <p class="date">22 March 2022</p>
+                            <a href="#">
+                                <h3>Arctic sea ice at maximum extent for 2022</h3>
+                            </a>
+                            <p class="parag">Arctic sea ice has likely reached its maximum extent for the year, at 14.88
+                                million square
+                                kilometers (5.75 million square miles) on February 25, according to scientists at the
+                                National Snow and Ice Data Center (NSIDC) at the University of Colorado Boulder. The
+                                2022
+                                maximum is the tenth lowest in the 44-year satellite record.</p>
+                        </div>
+                        <div class="ns">
+                            <p class="date">30 November 2021</p>
+                            <a href="#">
+                                <h3>Rainfall in the Arctic will soon be more common than snowfall</h3>
+                            </a>
+
+                            <p class="parag">More rain than snow will fall in the Arctic and this transition will occur
+                                decades earlier
+                                than previously predicted, a new study led by the University of Manitoba (UM) reports.
+                            </p>
+                        </div>
+                        <div class="ns">
+                            <p class="date">8 November 2021</p>
+                            <a href="#">
+                                <h3>Mountain and polar groups seek urgent COP26 decision</h3>
+                            </a>
+
+                            <p class="parag">Mountain and polar groups at the twenty-sixth United Nations Climate Change
+                                Conference of the
+                                Parties (COP26) are calling for more consideration of the dire global impacts that will
+                                result should governments not take greater action as the climate talks in Glasgow begin
+                                their second and final week.</p>
+                        </div>
+                        <div class="ns">
+                            <p class="date">22 September 2021</p>
+                            <a href="#">
+                                <h3>Arctic sea ice has reached minimum extent for 2021</h3>
+                            </a>
+
+                            <p class="parag">Arctic sea ice has likely reached its minimum extent for the year, at 4.72
+                                million square
+                                kilometers (1.82 million square miles) on September 16, 2021, according to scientists at
+                                the
+                                National Snow and Ice Data Center (NSIDC) at the University of Colorado Boulder. The
+                                2021
+                                minimum is the twelfth lowest in the nearly 43-year satellite record. The last 15 years
+                                are
+                                the lowest 15 sea ice extents in the satellite record. </p>
+                        </div>
+                    </div>
+                    <div class="right" style="width: 100%;">
+                        <div class="event">
+                            <h2 style="color:darkslategray;">Events</h2>
+                            <p class="parag">No events are currently posted</p>
+                        </div>
+                        <div class="ns2">
+                            <h2 style="color:darkslategray;">The Latest on Snow and Ice</h2>
+                            <div class="ns">
+                                <p class="date">8 June 2022</p>
+                                <a href="#">
+                                    <h3>Highs and lows as snow season ends</h3>
+                                </a>
+
+                                <p class="parag">May 2022 snow summary</p>
+                                <ul>
+                                    <li>Snow-covered area for the western United States was 119... <a href="#">read
+                                            more</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ns">
+                                <p class="date">6 June 2022</p>
+                                <a href="#">
+                                    <h3>On the high side of low</h3>
+                                </a>
+
+                                <p class="parag">Sea ice extent near both poles was again below average, but higher than
+                                    in
+                                    recent years
+                                    for most... <a href="#">read more</a></p>
+                            </div>
+                            <div class="ns">
+                                <p class="date">11 May 2022</p>
+                                <a href="#">
+                                    <h3>The West's tale of two seasons</h3>
+                                </a>
+
+                                <p class="parag">April 2022 snow summary</p>
+                                <ul>
+                                    <li>Snow-covered area for the western United States was 104... <a href="#">read
+                                            more</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ns">
+                                <p class="date">3 May 2022</p>
+                                <a href="#">
+                                    <h3>Springtime in the Arctic</h3>
+                                </a>
+
+                                <p class="parag">Arctic spring melt has begun. Ice extent declined most substantially in
+                                    the
+                                    Bering Sea
+                                    and the... <a href="#">read more</a></p>
+                            </div>
+                            <div class="ns">
+                                <p class="date">20 April 2022</p>
+                                <a href="#">
+                                    <h3>Daily updates return for Greenland Today, end for Antarctica Today</h3>
+                                </a>
+
+                                <p class="parag">Daily melt extent mapping for Greenland Ice Sheet has resumed, while
+                                    mapping for the...
+                                    <a href="#">read more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fo">
+            <footer>
+                <div class="data">
+                    <div class="bord">
+                        <div class="grii">
+                            <div class="col">
+
+                                Find Data
+
+                                <p class="line"></p>
+                                <ul>
+                                    <li><a href="#">Search NSIDC Data </a> </li>
+                                    <li><a href="#"> NASA Earthdata Search</a></li>
+                                    <li><a href="#">IceBridge Portal</a> </li>
+                                </ul>
+                            </div>
+                            <div class="col">
+
+                                Stay Current
+
+
+                                <p class="line"></p>
+                                <ul>
+                                    <li><a href="#"> Arctic Sea Ice News and Analysis</a> </li>
+                                    <li><a href="#"> Sea Ice Index (Passive microwave satellite data)</a></li>
+                                    <li><a href="#">MASIE (Daily sea ice extent, multi-source)</a></li>
+                                    <li><a href="#">Greenland Today</a></li>
+                                    <li><a href="#">Newsroom</a></li>
+                                </ul>
+                            </div>
+                            <div class="col">
+
+                                Learn About Snow and Ice
+
+                                <p class="line"></p>
+                                <ul>
+                                    <li><a href="#">Icelights: Answers to Your Questions</a></li>
+                                    <li><a href="#">Cryosphere Quick Facts</a></li>
+                                    <li><a href="#">All About Glaciers</a></li>
+                                    <li><a href="#">All About Snow</a></li>
+                                    <li><a href="#">All About Sea Ice</a></li>
+                                    <li><a href="#">Arctic Climatology - A Primer</a></li>
+                                </ul>
+                            </div>
+                            <div class="col">
+
+                                Get Help
+
+                                <p class="line"></p>
+                                <ul>
+                                    <li><a href="#">Knowledge Base</a></li>
+                                </ul>
+
+                                Etc.
+
+                                <p class="line"></p>
+                                <ul>
+                                    <li> <a href="">Use & Copyright</a> </li>
+                                    <li> <a href="">Web Policy</a> </li>
+                                    <li><a href="">Jobs</a></li>
+                                </ul>
+                                <div class="social_media">
+                                    <a href="https://www.facebook.com/NSIDC">
+                                        <img alt="Facebook" src="{% static 'images/f2.png'%}"></a>
+                                    <a href="https://twitter.com/NSIDC">
+                                        <img alt="Twitter" src="{% static 'images/t2.png'%}"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="down">
+                        <div class="i1">
+                            <div class="d1">
+                                <div class="dd1">
+                                    <img src="{% static 'images/icon.png' %}" alt="">
+                                </div>
+                                <div class="dd2">
+                                    <p>Home | Contact
+                                        <br>
+                                        <br>
+                                        © 2022, NATIONAL CENTRE FOR POLAR AND OCEAN RESEARCH
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
